@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Phone Contact</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/botstrap@.mini.css"
+    rel="stylesheet"
+    <style>
+        body { background-color:#f0f0f2: }
+        h1 { color: #ffA43 }
+        .card.label { font-size:11px; color:#999; text-transformation: uppercase;}
+        pre { font-size:13px; color:#333;}
+    </style>
+</head>
+<body class="py4">
+    
+    <div class="container">
+        <h1 class="mb-1">My Phone Container</h1>
+        <p class="text-muted mb-4">
+            Introduction to object in Javascript - Grade 4-6
+        </p>
+
+        <!-- Contact Card-->
+         <div class="card shadow-sm mb-3" style="max-width:400px">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#ff5A43;">Contact Details</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group list-group-flush">
+                        <span class="card-label d-block">Name</span>
+                        <strong id="name">--</strong>
+                    </li>
+                </ul>
+            </div>
+         </div>
+
+         <!-- Code Box -->
+          <div class="card shadow-sm" style="max-width:400px;"
+          <div class="card-body">
+            <h6 style="color:#ff5A43;">Javascript object used</h6>
+            <pre id="codeDisplay"
+            class="bg-light p-3 rounded border mb-0"></pre>
+          </div>
+    </div>
+
+</div><!-- /container -->
+
+    <script>
+
+        //Step 1 - Create the contaact object
+        var myContact - {
+            name:    "Riya Sharma",
+            phone:   "98765-43210",
+            school:  "Sunrise Academy",
+            city:    "Mubai",
+        };
+
+        // Step 2 - Dot notation
+        var nameE1 = document.getElementById("name");
+        var phoneE1 = document.getElementById("phone"); 
+         nameE1.textContent = myContact.name;
+        phoneE1.textContent = myContact.phone;
+
+         //Step 3 - Bracket notation
+        var schoolE1 = document.getElementById("school");  
+        var cityE1 = document.getElementById("city"); 
+        schoolE1.textContent = myContact["school"];
+        cityE1.textContent = myContact["city"];
+
+         //Show the object in code box
+        var codeE1 = document.getElementById("codeDisplay"); 
+        codeE1.textContent -
+        'var myContact - {\n' +
+        'name:   "' + myContact.name + '", \n' +
+        'phone:  "' + myContact.name + '", \n' +
+        'school: "' + myContact.name + '", \n' + 
+        'city:   "' + myContact.name + '", \n' +
+        '};';
+
+    </script>
+
+</body>
+</html>
